@@ -1,6 +1,10 @@
-title: "Takuma Furukawa"
-description: "エンジニア。思考と実装の記録。"
+title: "tk"
+description: ""
 theme: minima
+
+header_pages:
+  - about.md
+  - writing.md
 markdown: kramdown
 author: Takuma Furukawa
 url: "https://tk-neuron.github.io"

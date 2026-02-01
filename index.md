@@ -3,18 +3,7 @@ layout: home
 title: "Home"
 ---
 
-# Takuma Furukawa
+ソフトウェア/AIエンジニア。  
+人間の身体とテクノロジーの関係に興味があります。
 
-エンジニア。設計、実装、ドキュメンテーションに関心。
-
-noteから移行中：[mybrain_record](https://note.com/mybrain_record)
-
----
-
-## ナビゲーション
-
-- [About](/about/) — プロフィールと関心領域
-- [Now](/now/) — 現在の取り組み
-- [Projects](/projects/) — 実装したもの
-- [Writing](/writing/) — 記事とノート
-- [Colophon](/colophon/) — このサイトについて
+大学院では神経科学を専攻。2018年から[note](https://note.com/mybrain_record)で書いています。

@@ -9,6 +9,11 @@ markdown: kramdown
 author: Takuma Furukawa
 url: "https://tk-neuron.github.io"
 
+# Social media links (for footer icons)
+github_username: tk-neuron
+linkedin_username: takuma-furukawa-neuron
+note_url: https://note.com/mybrain_record
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

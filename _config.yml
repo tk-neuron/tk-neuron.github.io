@@ -1,4 +1,22 @@
-title: "Takuma's Site"
-description: "Writing / Notes / Projects"
+title: "Takuma Furukawa"
+description: "エンジニア。思考と実装の記録。"
 theme: minima
 markdown: kramdown
+author: Takuma Furukawa
+url: "https://tk-neuron.github.io"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+lang: ja
+timezone: Asia/Tokyo
+
+permalink: /writing/:year/:month/:day/:title/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
+  - .claude/

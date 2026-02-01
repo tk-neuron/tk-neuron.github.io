@@ -3,13 +3,18 @@ layout: home
 title: "Home"
 ---
 
-# Takuma's Site
+# Takuma Furukawa
 
-作業ログとポートフォリオをまとめる個人ブログです。更新は「書いてpush」だけで回します。
+エンジニア。設計、実装、ドキュメンテーションに関心。
 
-## 導線
-- [About](/about/)
-- [Now](/now/)
-- [Projects](/projects/)
-- [Writing / Notes](/writing/)
-- [Colophon](/colophon/)
+noteから移行中：[mybrain_record](https://note.com/mybrain_record)
+
+---
+
+## ナビゲーション
+
+- [About](/about/) — プロフィールと関心領域
+- [Now](/now/) — 現在の取り組み
+- [Projects](/projects/) — 実装したもの
+- [Writing](/writing/) — 記事とノート
+- [Colophon](/colophon/) — このサイトについて

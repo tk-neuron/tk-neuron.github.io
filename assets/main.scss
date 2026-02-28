@@ -279,10 +279,22 @@ li a:hover {
 
 /* Images & Figures */
 .post-content img {
-  max-width: 100%;
+  max-width: 65%;
   height: auto;
   border-radius: 8px;
-  margin: var(--space-8) 0;
+  margin: var(--space-8) auto;
+  display: block;
+}
+
+.post-content img[src*="markov-blanket"] {
+  max-width: 55%;
+}
+
+/* 縦長画像の高さ制限（ポートレート系） */
+.post-content img[src*="5843437"] {
+  max-height: 420px;
+  width: auto;
+  object-fit: contain;
 }
 
 .post-content .figure {
@@ -329,6 +341,7 @@ li a:hover {
   color: var(--muted);
   text-decoration: underline;
 }
+
 
 /* Horizontal rule */
 hr {

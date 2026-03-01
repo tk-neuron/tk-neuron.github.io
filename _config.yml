@@ -1,13 +1,16 @@
-title: "tk"
-description: ""
+title: "tk-neuron"
+description: "AI・エージェント・認知をテーマにした技術/思想ブログ"
 theme: minima
 
 header_pages:
   - about.md
   - writing.md
 markdown: kramdown
+kramdown:
+  math_engine: mathjax
 author: Takuma Furukawa
 url: "https://tk-neuron.github.io"
+baseurl: ""
 
 # Social media links (for footer icons)
 github_username: tk-neuron
@@ -22,6 +25,12 @@ lang: ja
 timezone: Asia/Tokyo
 
 permalink: /writing/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: "/assets/ogp/default.png"
 
 exclude:
   - Gemfile

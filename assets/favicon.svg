@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Neuron favicon">
+  <rect width="128" height="128" rx="24" fill="#111827"/>
+  <g fill="none" stroke="#f9fafb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="40" cy="64" r="14"/>
+    <circle cx="40" cy="64" r="4" fill="#f9fafb"/>
+    <path d="M26 60 L14 50"/>
+    <path d="M26 68 L12 74"/>
+    <path d="M30 78 L20 92"/>
+    <path d="M54 64 C72 64, 84 56, 98 56"/>
+    <path d="M54 64 C74 64, 88 72, 104 72"/>
+    <circle cx="98" cy="56" r="4" fill="#f9fafb"/>
+    <circle cx="104" cy="72" r="4" fill="#f9fafb"/>
+    <path d="M108 72 C114 72, 116 66, 120 64"/>
+    <circle cx="120" cy="64" r="3" fill="#f9fafb"/>
+  </g>
+</svg>

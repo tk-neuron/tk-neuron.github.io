@@ -399,6 +399,109 @@ pre code {
   background: none;
 }
 
+/* Tables */
+.post-content table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-8) 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.post-content table thead {
+  background: var(--bg-subtle);
+  border-bottom: 2px solid var(--border);
+}
+
+.post-content table th {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-xs);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  white-space: nowrap;
+  border-right: 1px solid var(--border-light);
+}
+
+.post-content table th:last-child {
+  border-right: none;
+}
+
+.post-content table td {
+  padding: var(--space-3) var(--space-4);
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border-light);
+  vertical-align: top;
+}
+
+.post-content table td:last-child {
+  border-right: none;
+}
+
+.post-content table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.post-content table tbody tr:hover {
+  background: var(--bg-subtle);
+}
+
+.post-content table td:first-child {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--ink);
+  white-space: nowrap;
+  font-weight: 500;
+  background: rgba(250, 250, 250, 0.5);
+}
+
+.post-content table sup {
+  font-size: 0.7em;
+}
+
+/* Wide mapping table (4+ columns) */
+.post-content div[style*="overflow-x"] {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin: var(--space-8) 0;
+}
+
+.post-content div[style*="overflow-x"] table {
+  min-width: 860px;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
+
+.post-content div[style*="overflow-x"] table td:first-child,
+.post-content div[style*="overflow-x"] table th:first-child {
+  min-width: 130px;
+  position: sticky;
+  left: 0;
+  background: var(--bg-subtle);
+  z-index: 1;
+  border-right: 2px solid var(--border);
+}
+
+.post-content div[style*="overflow-x"] table td {
+  font-size: var(--text-xs);
+  line-height: var(--leading-relaxed);
+  min-width: 210px;
+}
+
+.post-content div[style*="overflow-x"] table td:first-child {
+  white-space: normal;
+  font-size: 0.7rem;
+}
+
 /* Blockquote */
 blockquote {
   margin: var(--space-6) 0;

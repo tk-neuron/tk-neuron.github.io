@@ -900,8 +900,8 @@ main,
   }
 
 
-  .post-content mjx-container {
-    display: block;
+  /* インライン数式($$...$$)は display: inline のまま維持。display math のみ overflow 対応 */
+  .post-content mjx-container[display="true"] {
     overflow-x: auto;
     overflow-y: hidden;
   }

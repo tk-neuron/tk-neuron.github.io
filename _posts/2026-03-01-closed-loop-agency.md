@@ -24,6 +24,26 @@ AIに「主体性」や「機能意識」を実装する最難関は、能力の
 
 ---
 
+## 0. 前提：言語モデルからエージェントへ
+
+本稿はAIエージェントと人間の知能を比較する。その土台として、言語モデルがどう動き、どうやって「行為する主体」になるかを押さえておく。
+
+### 次トークン予測：言語モデルの原理
+
+大規模言語モデル（LLM）の訓練目標は、「これまでの文脈が与えられたとき、次に来るトークン（単語の断片）がどの程度の確率で現れるか」を予測することだ。<sup><a href="#ref-33">(33)</a></sup> 入力系列の各トークン間の関係をattentionと呼ばれる機構で学習し、文脈表現を構築する。<sup><a href="#ref-34">(34)</a></sup> 大量のテキストでこの予測を繰り返すうちに、モデルは言語の統計的規則だけでなく、文章に含まれる推論の型や説明の構造まで取り込んでいく。
+
+### 「役に立つ」への調整
+
+次トークン予測だけでは、モデルは「もっともらしい続き」を生成する機械にとどまる。人間が期待する「質問に答える」「指示に従う」という振る舞いに寄せるには追加の調整が必要だ。代表的な手法がRLHF（人間のフィードバックによる強化学習）で、まず人手の模範回答で微調整し（instruction tuning）、次に人間が複数の出力を比較して順位づけしたデータで「望ましい振る舞い」を強化する。<sup><a href="#ref-28">(28)</a></sup>
+
+### ツール呼び出しと構造化出力：行為する言語モデル
+
+調整済みのLLMを実務で「行為」させるには、もう一段の仕組みが要る。ツール（関数）の仕様をJSONスキーマとしてモデルに渡し、モデルにはツール呼び出しの指示を構造化された形式で出力させる。<sup><a href="#ref-35">(35)</a></sup> 実行はモデルではなく外側のランタイムが行い、結果が「観測」としてモデルに戻る。この「推論→ツール呼び出し→結果の観測→次の推論」がエージェントの基本構造であり、ReActの枠組みで定式化されている。<sup><a href="#ref-36">(36)</a></sup> Structured Outputsのように出力をJSONスキーマに厳密準拠させれば、ツール呼び出しの引数が壊れにくくなり、ループの安定性が増す。<sup><a href="#ref-37">(37)</a></sup>
+
+本稿が繰り返す「閉ループ」は、この推論→行動→観測の構造に由来する。以降、このループの各要素がどこに配置されるかを、人間の認知と比較していく。
+
+---
+
 ## 1. 入口：ステートレス／ステートフルは何を言っていて、何を言い損ねるか
 
 LLMと人間の知能を比べようとするとき、まず思いつく対比がある。
@@ -437,4 +457,9 @@ $$
 <li id="ref-30"><a href="https://arxiv.org/abs/2302.04761">Toolformer: Language Models Can Teach Themselves to Use Tools (Schick et al., 2023)</a></li>
 <li id="ref-31"><a href="https://pubmed.ncbi.nlm.nih.gov/23825119/">Life as we know it (Friston, 2013) | PubMed</a></li>
 <li id="ref-32"><a href="https://pubmed.ncbi.nlm.nih.gov/29343629/">The Markov blankets of life (Kirchhoff et al., 2018) | PubMed</a></li>
+<li id="ref-33"><a href="https://huggingface.co/learn/agents-course/en/unit1/what-are-llms">What are LLMs? - Hugging Face Agents Course</a></li>
+<li id="ref-34"><a href="https://jalammar.github.io/illustrated-transformer/">The Illustrated Transformer (Alammar, 2018)</a></li>
+<li id="ref-35"><a href="https://developers.openai.com/api/docs/guides/function-calling/">Function calling | OpenAI API</a></li>
+<li id="ref-36"><a href="https://arxiv.org/abs/2210.03629">ReAct: Synergizing Reasoning and Acting in Language Models (Yao et al., 2022)</a></li>
+<li id="ref-37"><a href="https://openai.com/index/introducing-structured-outputs-in-the-api/">Introducing Structured Outputs in the API | OpenAI</a></li>
 </ol>

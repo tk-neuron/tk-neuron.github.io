@@ -3,7 +3,7 @@ layout: post
 title: "AIを賢くしても主体は宿らない ── 閉ループが問う閉包性の設計"
 date: 2026-03-01
 tags: [ai, llm, agents, philosophy]
-description: "LLMと人間を閉ループ状態機械として比較し、差分の本質を『価値と更新の閉包』として再定義する。"
+description: "LLMエージェントと人間を閉ループの状態機械として比較し、差分の本質を身体が課す三制約（局所性・コスト吸収・単一性）と「学習の自律」として定式化する。"
 og_image: "/assets/ogp/default.png"
 math: true
 ---

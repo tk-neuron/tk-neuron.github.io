@@ -532,6 +532,15 @@ pre code {
   font-size: 0.7rem;
 }
 
+/* Mapping table: equal-width content columns (Codex vs 生物脳) */
+.post-content .mapping-table table {
+  table-layout: fixed;
+}
+.post-content .mapping-table table td:nth-child(2),
+.post-content .mapping-table table td:nth-child(3) {
+  min-width: 0; /* allow colgroup widths to take effect */
+}
+
 /* Blockquote */
 blockquote {
   margin: var(--space-6) 0;

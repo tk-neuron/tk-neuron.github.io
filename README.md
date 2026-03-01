@@ -1,6 +1,6 @@
 # Personal Site — Takuma Furukawa
 
-個人の技術ブログ。noteから移行中。
+個人の技術ブログ。GitHub Pagesで運用中。
 
 ## 概要
 
@@ -50,11 +50,11 @@ open http://localhost:4000
 2. **Push** — Gitでバージョン管理
 3. **公開** — GitHub Pagesが自動デプロイ
 
-## note移行戦略
+## コンテンツ管理
 
-### 移行方針
-- 重要な記事から順次移行
-- Markdown形式に変換
+### 方針
+- 重要な記事から順次整理
+- Markdown形式で記述
 - 画像などのアセットも自己管理
 
 ### 記事の構造

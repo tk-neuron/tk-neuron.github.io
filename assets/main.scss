@@ -336,6 +336,20 @@ li a:hover {
   text-decoration: underline;
 }
 
+/* 出典（上付き・括弧付き・リンク） */
+.post-content sup {
+  font-size: 0.75em;
+  line-height: 0;
+}
+.post-content sup a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+.post-content sup a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
 
 /* Horizontal rule */
 hr {
